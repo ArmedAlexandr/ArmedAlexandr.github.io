@@ -1,0 +1,180 @@
+/* ---------- Colours and fonts ----------
+   Change a value here and it updates everywhere on the page. */
+:root {
+  --bg: #1d2433;        /* page background */
+  --surface: #273049;   /* cards */
+  --line: #3a4563;      /* borders */
+  --text: #eef1f7;      /* main text */
+  --muted: #a3adc4;     /* softer text */
+  --accent: #ffb703;    /* amber highlight */
+
+  --font-heading: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+}
+
+/* ---------- Basics ---------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+a { color: var(--accent); }
+a:hover { color: var(--text); }
+
+/* Visible outline when navigating with the keyboard */
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Top bar ---------- */
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px 24px;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 24px 0;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.top nav { display: flex; gap: 20px; }
+
+.top nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.top nav a:hover { color: var(--accent); }
+
+/* ---------- Page layout ---------- */
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section { padding: 56px 0 0; }
+
+p { max-width: 60ch; margin: 0 0 1rem; }
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  margin: 0 0 16px;
+}
+
+/* ---------- Hero ---------- */
+.hero { padding-top: 12vh; }
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(3rem, 11vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin: 0 0 28px;
+}
+
+.role {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.place { color: var(--muted); }
+
+/* ---------- Skills ---------- */
+.skills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills li {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 16px;
+}
+
+/* ---------- Projects (save slots) ---------- */
+.slots {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.slot {
+  border: 2px dashed var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  color: var(--muted);
+}
+
+.slot h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+}
+
+.slot p { margin-bottom: 0; }
+
+/* A finished project: solid card with an amber edge */
+.slot.filled {
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-left: 6px solid var(--accent);
+  color: var(--text);
+}
+
+.slot.filled p { margin-bottom: 0.75rem; }
+.slot .tags { color: var(--muted); font-size: 0.95rem; }
+
+/* ---------- Contact ---------- */
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 24px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  max-width: 880px;
+  margin: 72px auto 0;
+  padding: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+footer p { margin: 0; }
+
+/* Smooth scrolling off for people who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

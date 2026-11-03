@@ -1,59 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="./favicon.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Alexandr Vdovicenco, game developer based in London, UK.">
   <title>Alexandr Vdovicenco | Game Developer</title>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #111418;
-      color: #e6e6e6;
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 10vh 20px;
-      line-height: 1.6;
-    }
-    h1 { font-size: 2.5rem; margin: 0; }
-    .subtitle { font-size: 1.2rem; color: #8ab4ff; margin: 4px 0; }
-    .location { color: #999; margin-top: 0; }
-    h2 {
-      font-size: 1.3rem;
-      margin-top: 2.5rem;
-      border-bottom: 1px solid #333;
-      padding-bottom: 6px;
-    }
-    a { color: #8ab4ff; }
-  </style>
+  <meta name="description" content="Portfolio of Alexandr Vdovicenco, game developer based in London, UK. Unity and C#.">
+
+  <!-- Your favicon: this file must sit next to index.html -->
+  <link rel="icon" href="favicon.png">
+
+  <!-- Fonts from Google. If they fail to load, the browser falls back to system fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- All the styling lives in this file -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Alexandr Vdovicenco</h1>
-  <p class="subtitle">Game Developer</p>
-  <p class="location">London, UK</p>
+  <header class="top">
+    <a class="logo" href="#top">Alexandr Vdovicenco</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <h2>About</h2>
-  <p>
-    I'm a game development student in London, building games and learning
-    something new with every project. This site is my portfolio, and I'm
-    open to opportunities.
-  </p>
+  <main id="top">
 
-  <h2>Skills</h2>
-  <ul>
-    <li>Engine: Unity</li>
-    <li>Languages: C#</li>
-  </ul>
+    <!-- HERO: the first thing visitors see -->
+    <section class="hero">
+      <h1>Alexandr<br>Vdovicenco</h1>
+      <p class="role">Game developer</p>
+      <p class="place">London, UK</p>
+    </section>
 
-  <h2>Projects</h2>
-  <p>Coming soon.</p>
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I'm a game development student in London. I build games in Unity and
+        write the code behind them in C#. This site is where I collect my work,
+        and I'm open to internships and junior roles.
+      </p>
+    </section>
 
-  <h2>Links</h2>
-  <ul>
-    <li><a href="https://github.com/ArmedAlexandr">GitHub</a></li>
-  </ul>
+    <!-- SKILLS: add new items by copying a whole <li>...</li> line -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>Unity</li>
+        <li>C#</li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS: each <li class="slot"> is one project card.
+         When you finish a game, replace an empty slot using the example below. -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="slots">
+
+        <!--
+        EXAMPLE of a finished project (delete the comment markers to use it):
+        <li class="slot filled">
+          <h3>Game title</h3>
+          <p>One sentence: what the game is and what you built.</p>
+          <p class="tags">Unity, C#, solo project</p>
+          <a href="https://link-to-your-game-or-video">Play or watch</a>
+        </li>
+        -->
+
+        <li class="slot">
+          <h3>Empty slot</h3>
+          <p>First project in progress.</p>
+        </li>
+        <li class="slot">
+          <h3>Empty slot</h3>
+          <p>Next one coming soon.</p>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Hiring or want to talk about games? Find me here.</p>
+      <ul class="links">
+        <li><a href="https://github.com/ArmedAlexandr">GitHub</a></li>
+        <!-- Add your email by removing the comment markers and editing the address:
+        <li><a href="mailto:you@example.com">Email</a></li>
+        -->
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>London, UK</p>
+  </footer>
 
 </body>
 </html>
