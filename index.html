@@ -38,24 +38,41 @@
       <p class="place">London, UK</p>
     </section>
 
-    <!-- About -->
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I'm a game development student in London. I build games in Unity and
-        write the code behind them in C#. This site is where I collect my work,
-        and I'm open to internships and junior roles.
-      </p>
-    </section>
+    <!-- About and Skills sit side by side on wide screens -->
+    <div class="duo">
 
-    <!-- Skills: to add one, copy a whole <li> line -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>Unity</li>
-        <li>C#</li>
-      </ul>
-    </section>
+      <!-- About -->
+      <section id="about">
+        <h2>About</h2>
+        <div class="card">
+          <p>
+            I'm a game development student in London. I build games in Unity and
+            write the code behind them in C#. This site is where I collect my work,
+            and I'm open to internships and junior roles.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills: to add one, copy a whole <li> line -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="card">
+          <ul class="skills">
+            <li>Unity</li>
+            <li>C#</li>
+          </ul>
+
+          <!-- Software: logo files must sit next to this file. To add one, copy a whole <li> line. -->
+          <h3>Software I use</h3>
+          <ul class="software">
+            <li><span class="logo-tile"><img src="UnityLogo.png" alt=""></span> Unity</li>
+            <li><span class="logo-tile"><img src="VisualStudioCommunityLogo.png" alt=""></span> Visual Studio Community</li>
+            <li><span class="logo-tile"><img src="GitHubLogo.png" alt=""></span> GitHub</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
 
     <!-- Projects: each <article> is one project. Copy a whole article to add another. -->
     <section id="projects">

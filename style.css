@@ -1,4 +1,4 @@
-/* Colours and fonts: change a value here and it updates everywhere */
+/* Colours, fonts and page width: change a value here and it updates everywhere */
 :root {
   --bg: #1d2433;
   --surface: #273049;
@@ -6,6 +6,11 @@
   --text: #eef1f7;
   --muted: #a3adc4;
   --accent: #ffb703;
+
+  /* Background behind each logo. If a logo is hard to see, try #1d2433 (dark) or #ffffff (light) */
+  --logo-bg: #eef1f7;
+
+  --page: 1120px;
 
   --font-heading: "Bricolage Grotesque", system-ui, sans-serif;
   --font-body: "Figtree", system-ui, sans-serif;
@@ -40,7 +45,7 @@ a:focus-visible {
   justify-content: space-between;
   align-items: center;
   gap: 12px 24px;
-  max-width: 880px;
+  max-width: var(--page);
   margin: 0 auto;
   padding: 24px 24px 0;
 }
@@ -62,7 +67,7 @@ a:focus-visible {
 
 /* Page layout */
 main {
-  max-width: 880px;
+  max-width: var(--page);
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -75,6 +80,33 @@ h2 {
   font-family: var(--font-heading);
   font-size: 1.6rem;
   margin: 0 0 16px;
+}
+
+/* Boxes with rounded corners */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.card p:last-child { margin-bottom: 0; }
+
+.card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  margin: 28px 0 14px;
+}
+
+/* About and Skills: two columns on wide screens, stacked on phones */
+.duo {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 24px;
+}
+
+@media (min-width: 860px) {
+  .duo { grid-template-columns: 1fr 1fr; }
 }
 
 /* Hero */
@@ -109,10 +141,43 @@ h2 {
 }
 
 .skills li {
-  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 6px 16px;
+}
+
+/* Software with logos */
+.software {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.software li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 7px;
+  background: var(--logo-bg);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.logo-tile img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 /* Projects */
@@ -151,7 +216,7 @@ h2 {
 .video {
   aspect-ratio: 16 / 9;
   background: var(--surface);
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -172,18 +237,23 @@ h2 {
   color: var(--muted);
 }
 
-/* Info boxes: side by side on wide screens, stacked on phones */
+/* Project info: three boxes left to right on wide screens, stacked on phones */
 .info {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: 1fr;
   gap: 16px;
+}
+
+@media (min-width: 860px) {
+  .info { grid-template-columns: 1fr 1fr 1.4fr; }
 }
 
 .box {
   background: var(--surface);
-  border-radius: 12px;
+  border: 1px solid var(--line);
   border-top: 4px solid var(--accent);
-  padding: 20px 22px;
+  border-radius: 16px;
+  padding: 22px 24px;
 }
 
 .box h4 {
@@ -210,7 +280,7 @@ h2 {
 
 /* Footer */
 footer {
-  max-width: 880px;
+  max-width: var(--page);
   margin: 72px auto 0;
   padding: 24px;
   border-top: 1px solid var(--line);
