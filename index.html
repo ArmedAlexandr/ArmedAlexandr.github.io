@@ -6,15 +6,15 @@
   <title>Alexandr Vdovicenco | Game Developer</title>
   <meta name="description" content="Portfolio of Alexandr Vdovicenco, game developer based in London, UK. Unity and C#.">
 
-  <!-- Your favicon: this file must sit next to index.html -->
+  <!-- Favicon: favicon.png must sit next to this file -->
   <link rel="icon" href="favicon.png">
 
-  <!-- Fonts from Google. If they fail to load, the browser falls back to system fonts. -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- All the styling lives in this file -->
+  <!-- Styling -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,14 +31,14 @@
 
   <main id="top">
 
-    <!-- HERO: the first thing visitors see -->
+    <!-- Hero -->
     <section class="hero">
       <h1>Alexandr<br>Vdovicenco</h1>
       <p class="role">Game developer</p>
       <p class="place">London, UK</p>
     </section>
 
-    <!-- ABOUT -->
+    <!-- About -->
     <section id="about">
       <h2>About</h2>
       <p>
@@ -48,7 +48,7 @@
       </p>
     </section>
 
-    <!-- SKILLS: add new items by copying a whole <li>...</li> line -->
+    <!-- Skills: to add one, copy a whole <li> line -->
     <section id="skills">
       <h2>Skills</h2>
       <ul class="skills">
@@ -57,43 +57,110 @@
       </ul>
     </section>
 
-    <!-- PROJECTS: each <li class="slot"> is one project card.
-         When you finish a game, replace an empty slot using the example below. -->
+    <!-- Projects: each <article> is one project. Copy a whole article to add another. -->
     <section id="projects">
       <h2>Projects</h2>
-      <ul class="slots">
 
-        <!--
-        EXAMPLE of a finished project (delete the comment markers to use it):
-        <li class="slot filled">
-          <h3>Game title</h3>
-          <p>One sentence: what the game is and what you built.</p>
-          <p class="tags">Unity, C#, solo project</p>
-          <a href="https://link-to-your-game-or-video">Play or watch</a>
-        </li>
-        -->
+      <!-- Project 1 -->
+      <article class="project">
+        <h3>Project title</h3>
 
-        <li class="slot">
-          <h3>Empty slot</h3>
-          <p>First project in progress.</p>
-        </li>
-        <li class="slot">
-          <h3>Empty slot</h3>
-          <p>Next one coming soon.</p>
-        </li>
+        <!-- Tags: change the words, or copy an <li> line to add more (for example Engine raylib, Language C++) -->
+        <ul class="meta">
+          <li><span>Engine</span> Unity</li>
+          <li><span>Language</span> C#</li>
+          <li><span>Team</span> Solo</li>
+        </ul>
 
-      </ul>
+        <!-- Video: delete the grey box and put in a YouTube embed instead.
+             Take the part of your YouTube link after v= (the video ID) and use:
+             <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Gameplay video" loading="lazy" allowfullscreen></iframe>
+
+             To use a video file instead, put it in a folder called videos and use:
+             <video controls preload="metadata" src="videos/my-game.mp4"></video> -->
+        <div class="video">
+          <div class="video-empty">Gameplay video coming soon</div>
+        </div>
+
+        <div class="info">
+          <div class="box">
+            <h4>My role</h4>
+            <p>What you personally did on this project.</p>
+          </div>
+          <div class="box">
+            <h4>Overview</h4>
+            <p>What the game is and what the player does.</p>
+          </div>
+          <div class="box">
+            <h4>Technical overview</h4>
+            <p>How it works: systems you built, tools used, problems you solved.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project">
+        <h3>Project title</h3>
+        <ul class="meta">
+          <li><span>Engine</span> Unity</li>
+          <li><span>Language</span> C#</li>
+          <li><span>Team</span> Solo</li>
+        </ul>
+        <div class="video">
+          <div class="video-empty">Gameplay video coming soon</div>
+        </div>
+        <div class="info">
+          <div class="box">
+            <h4>My role</h4>
+            <p>What you personally did on this project.</p>
+          </div>
+          <div class="box">
+            <h4>Overview</h4>
+            <p>What the game is and what the player does.</p>
+          </div>
+          <div class="box">
+            <h4>Technical overview</h4>
+            <p>How it works: systems you built, tools used, problems you solved.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project">
+        <h3>Project title</h3>
+        <ul class="meta">
+          <li><span>Engine</span> Unity</li>
+          <li><span>Language</span> C#</li>
+          <li><span>Team</span> Solo</li>
+        </ul>
+        <div class="video">
+          <div class="video-empty">Gameplay video coming soon</div>
+        </div>
+        <div class="info">
+          <div class="box">
+            <h4>My role</h4>
+            <p>What you personally did on this project.</p>
+          </div>
+          <div class="box">
+            <h4>Overview</h4>
+            <p>What the game is and what the player does.</p>
+          </div>
+          <div class="box">
+            <h4>Technical overview</h4>
+            <p>How it works: systems you built, tools used, problems you solved.</p>
+          </div>
+        </div>
+      </article>
+
     </section>
 
-    <!-- CONTACT -->
+    <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>Hiring or want to talk about games? Find me here.</p>
+      <p>Hiring or want to talk about games? Get in touch.</p>
       <ul class="links">
+        <li><a href="mailto:alexandr@vdovicenco.com">alexandr@vdovicenco.com</a></li>
         <li><a href="https://github.com/ArmedAlexandr">GitHub</a></li>
-        <!-- Add your email by removing the comment markers and editing the address:
-        <li><a href="mailto:you@example.com">Email</a></li>
-        -->
       </ul>
     </section>
 

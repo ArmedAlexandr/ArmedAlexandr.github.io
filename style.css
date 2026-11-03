@@ -1,18 +1,17 @@
-/* ---------- Colours and fonts ----------
-   Change a value here and it updates everywhere on the page. */
+/* Colours and fonts: change a value here and it updates everywhere */
 :root {
-  --bg: #1d2433;        /* page background */
-  --surface: #273049;   /* cards */
-  --line: #3a4563;      /* borders */
-  --text: #eef1f7;      /* main text */
-  --muted: #a3adc4;     /* softer text */
-  --accent: #ffb703;    /* amber highlight */
+  --bg: #1d2433;
+  --surface: #273049;
+  --line: #3a4563;
+  --text: #eef1f7;
+  --muted: #a3adc4;
+  --accent: #ffb703;
 
   --font-heading: "Bricolage Grotesque", system-ui, sans-serif;
   --font-body: "Figtree", system-ui, sans-serif;
 }
 
-/* ---------- Basics ---------- */
+/* Basics */
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -29,13 +28,12 @@ body {
 a { color: var(--accent); }
 a:hover { color: var(--text); }
 
-/* Visible outline when navigating with the keyboard */
 a:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
 
-/* ---------- Top bar ---------- */
+/* Top bar */
 .top {
   display: flex;
   flex-wrap: wrap;
@@ -62,7 +60,7 @@ a:focus-visible {
 }
 .top nav a:hover { color: var(--accent); }
 
-/* ---------- Page layout ---------- */
+/* Page layout */
 main {
   max-width: 880px;
   margin: 0 auto;
@@ -79,7 +77,7 @@ h2 {
   margin: 0 0 16px;
 }
 
-/* ---------- Hero ---------- */
+/* Hero */
 .hero { padding-top: 12vh; }
 
 .hero h1 {
@@ -100,7 +98,7 @@ h2 {
 
 .place { color: var(--muted); }
 
-/* ---------- Skills ---------- */
+/* Skills */
 .skills {
   list-style: none;
   padding: 0;
@@ -117,52 +115,100 @@ h2 {
   padding: 6px 16px;
 }
 
-/* ---------- Projects (save slots) ---------- */
-.slots {
+/* Projects */
+.project {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.project h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  margin: 0 0 12px;
+}
+
+/* Tags such as Engine: Unity */
+.meta {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.meta li {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 14px;
+  font-size: 0.95rem;
+}
+
+.meta span { color: var(--muted); margin-right: 4px; }
+
+/* Video: keeps a 16:9 shape on every screen size */
+.video {
+  aspect-ratio: 16 / 9;
+  background: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.video iframe,
+.video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-empty {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+
+/* Info boxes: side by side on wide screens, stacked on phones */
+.info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
 }
 
-.slot {
-  border: 2px dashed var(--line);
+.box {
+  background: var(--surface);
   border-radius: 12px;
-  padding: 24px;
-  color: var(--muted);
+  border-top: 4px solid var(--accent);
+  padding: 20px 22px;
 }
 
-.slot h3 {
+.box h4 {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   margin: 0 0 8px;
 }
 
-.slot p { margin-bottom: 0; }
-
-/* A finished project: solid card with an amber edge */
-.slot.filled {
-  background: var(--surface);
-  border: 2px solid var(--line);
-  border-left: 6px solid var(--accent);
-  color: var(--text);
+.box p {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0;
 }
 
-.slot.filled p { margin-bottom: 0.75rem; }
-.slot .tags { color: var(--muted); font-size: 0.95rem; }
-
-/* ---------- Contact ---------- */
+/* Contact */
 .links {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 8px 24px;
 }
 
-/* ---------- Footer ---------- */
+/* Footer */
 footer {
   max-width: 880px;
   margin: 72px auto 0;
@@ -174,7 +220,7 @@ footer {
 
 footer p { margin: 0; }
 
-/* Smooth scrolling off for people who prefer less motion */
+/* Less motion for people who prefer it */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
