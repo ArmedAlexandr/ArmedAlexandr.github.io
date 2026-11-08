@@ -1,6 +1,4 @@
-/* Colours, fonts and page width: change a value here and it updates everywhere */
 :root {
-  /* Obsidian-inspired background with enchanted-violet accents */
   --bg: #0d0a12;
   --surface: #171321;
   --line: #38294b;
@@ -10,7 +8,6 @@
   --accent-bright: #ddb8ff;
   --accent-glow: rgba(189, 121, 255, 0.32);
 
-  /* Keep software logos on a light tile so their original colours stay visible. */
   --logo-bg: #eef1f7;
 
   --page: 1120px;
