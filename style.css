@@ -412,4 +412,21 @@ footer p { margin: 0; }
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
+    /* Animated ASCII footer */
+  .ascii-footer-art {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 40px 0 20px;
+      overflow: hidden;
+  }
+  
+  .ascii-footer-art ascii-art {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+  
+      /* Automatically scale to available screen width */
+      --ascii-size: clamp(1px, calc(1.6611vw - 0.8px), 17.8px) !important;
+  }
 }
